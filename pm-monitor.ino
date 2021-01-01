@@ -22,7 +22,7 @@ void setup() {
 
   pmSerial.begin(9600);
 
-  if (! aqi.begin_UART(&pmSerial)) { // connect to the sensor over software serial
+  if (! aqi.begin_UART(&pmSerial)) {
     Serial.println("Could not find PM 2.5 sensor!");
     while (1) delay(10);
   }
